@@ -1,0 +1,110 @@
+@import "../color.scss";
+@import "../setting.scss";
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 100%;
+  background: $dark;
+  box-shadow: 0 1px 25px $light;
+  &-players {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &-item {
+      display: flex;
+      align-items: center;
+      margin: 0 2em;
+      height: 100%;
+      &-ava {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        width: 50px;
+        img {
+          width: 100%;
+          height: 50px;
+          border-radius: 50%;
+        }
+        &-img_red {
+          border: 4px solid $map_red;
+          box-shadow: 0 0 15px $map_red;
+        }
+        &-img_blue {
+          border: 4px solid $map_blue;
+          box-shadow: 0 0 15px $map_blue;
+        }
+        &-img_violet {
+          border: 4px solid $map_violet;
+          box-shadow: 0 0 15px $map_violet;
+        }
+        &-img_orange {
+          border: 4px solid $map_orange;
+          box-shadow: 0 0 15px $map_orange;
+        }
+        &-img_magenta {
+          border: 4px solid $map_brown;
+          box-shadow: 0 0 15px $map_brown;
+        }
+        &-img_green {
+          border: 4px solid $map_green;
+          box-shadow: 0 0 15px $map_green;
+        }
+        &-img_cyan {
+          border: 4px solid $map_cyan;
+          box-shadow: 0 0 15px $map_cyan;
+        }
+        &-img_yellow {
+          border: 4px solid $map_yellow;
+          box-shadow: 0 0 15px $map_yellow;
+        }
+      }
+      &-land {
+        &-red {
+          color: $map_red;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-blue {
+          color: $map_blue;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-magenta {
+          color: $map_brown;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-green {
+          color: $map_green;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-violet {
+          color: $map_violet;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-yellow {
+          color: $map_yellow;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-cyan {
+          color: $map_cyan;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+        &-orange {
+          color: $map_orange;
+          font-weight: 700;
+          padding-left: 0.5em;
+        }
+      }
+    }
+  }
+}

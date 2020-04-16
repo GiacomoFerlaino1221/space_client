@@ -1,0 +1,138 @@
+@import '../color.scss';
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+
+  // burger
+  &-burger {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    transition: all .3s ease;
+    z-index: 99999;
+    top: -4px;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all .3s ease;
+    }
+
+    &.active {
+      left: 300px;
+    }
+
+    &:hover {
+      cursor: url('../../icons/cursor.svg'), auto;
+    }
+  }
+
+  // menu
+  &-menu {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    transform: translateX(calc(-100% - 16px));
+    height: 100vh;
+    background: $red;
+    transition: all .2s ease;
+    padding: 4em 1em 0 1em;
+    box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+
+    &-title {
+      color: $orange;
+      top: 8px;
+      position: absolute;
+    }
+
+    &-logo {
+      top: 8px;
+      position: absolute;
+      img {
+        width: calc(100% - 16px);
+      }
+    }
+
+    &.active {
+      transform: translateX(-16px);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      cursor: url('../../icons/cursor.svg'), auto;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6em;
+      li {
+        margin-bottom: 1em;
+        padding: 0.5em;
+        background: $blue;
+        border-radius: 8px;
+        transition: all .3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.25em;
+        text-align: center;
+        box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.2), 0 -8px 0 rgba(0, 0, 0, 0.05);
+        min-height: 60px;
+        img {
+          width: 28px;
+        }
+        &:hover {
+          cursor: url('../../icons/cursor.svg'), auto;
+          background: $orange;
+        }
+      }
+    }
+
+    .language {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      width: 90%;
+      bottom: 1em;
+      select {
+        background: $orange;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 0.5em;
+        border-radius: 4px;
+        &:hover {
+          cursor: url('../../icons/cursor.svg'), auto;
+        }
+        option {
+          &:hover {
+            cursor: url('../../icons/cursor.svg'), auto !important;
+          }
+        }
+      }
+    }
+
+    .author {
+      position: absolute;
+      bottom: 1em;
+      width: 80%;
+      left: 0;
+      text-align: center;
+      padding: 0.25em 0;
+      span {
+        opacity: 0.5;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+}
